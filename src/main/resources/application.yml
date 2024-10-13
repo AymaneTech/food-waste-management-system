@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: Foodeals
+  datasource:
+    url: jdbc:postgresql://localhost:5432/foodeals
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update
+    show-sql: true
+
+app:
+  security:
+    jwt:
+      secret-key: 883e807d7ee46bfd82464d697b0e6455d32b8406c6ee3a36e4a97de7ab976196
+      # 1 day
+      expiration: 86400000
+      refresh-token:
+        # 7 days
+        expiration: 604800000
